@@ -249,7 +249,7 @@ exports.deleteFood = async (req, res) => {
   try {
     const food = await Food.findById(req.params.id);
     if (food) {
-      await food.deleteOne();
+      await food.deleteOne(); 
       res.json({ message: "Data makanan berhasil dihapus" });
     } else {
       res.status(404).json({ message: "Data makanan tidak ditemukan" });
